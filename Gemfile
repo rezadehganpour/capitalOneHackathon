@@ -62,6 +62,11 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'autoprefixer-rails'
 # bower dependencies manager for rails
 gem 'bower-rails'
+
+gem 'chartkick'
+gem 'highcharts-rails'
+gem 'groupdate'
+
 # modernizr
 gem 'modernizr-rails', '~> 2.7.1'
 # requirejs
