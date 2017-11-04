@@ -13,6 +13,8 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
+gem 'jquery-rails'
+
 gem 'erubis', '~> 2.7.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -55,7 +57,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # twitter bootstrap
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 # auto prefixer
 gem 'autoprefixer-rails'
 # bower dependencies manager for rails
@@ -88,6 +90,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'meta_request'
+  gem "rack-livereload", group: :development
 end
 group :test do
   gem 'airborne' # api test
