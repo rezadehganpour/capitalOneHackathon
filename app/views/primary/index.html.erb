@@ -100,12 +100,24 @@
 <!-- Example row of columns -->
 <div class="row">
   <div class="col-md-4">
-    <%= line_chart Transaction.all.group_by_month(:date, last: 12, current: false).sum('amount') %>
+    <%= line_chart Transaction.all.group_by_month(:date, last: 12, current: false).sum('amount'),
+    title: 'Monthly Spending',
+    color: 'green',
+    library:{
+        yAxis: {
+            labels: {
+                format: '${value}'
+            }
+        },
+        tooltip: {
+            pointFormat: 'Total Spent: <b>{point.y}</b>',
+            xDateFormat: '%B',
+            valuePrefix: '$'
+          }
+    }%>
   </div>
   <div class="col-md-4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <%= pie_chart Transaction.group(:merchant).count %>%
  </div>
   <div class="col-md-4">
     <h2>Heading</h2>
