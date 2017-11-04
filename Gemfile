@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
+gem 'erubis', '~> 2.7.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,7 +46,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -52,3 +54,51 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# twitter bootstrap
+gem 'bootstrap-sass'
+# auto prefixer
+gem 'autoprefixer-rails'
+# bower dependencies manager for rails
+gem 'bower-rails'
+# modernizr
+gem 'modernizr-rails', '~> 2.7.1'
+# requirejs
+gem 'requirejs-rails'
+# font awesome
+gem 'font-awesome-rails'
+
+group :development, :test do
+  gem 'faker' # https://github.com/stympy/faker
+  gem 'factory_girl_rails' # https://github.com/thoughtbot/factory_girl_rails
+  gem 'database_cleaner'
+  gem 'rspec'
+  gem 'rspec-rails' # https://github.com/rspec/rspec-rails
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'shoulda-matchers' # https://github.com/thoughtbot/shoulda-matchers
+  gem 'shoulda-callback-matchers', '~> 1.0'
+  gem 'spring-commands-rspec'
+  gem 'jasmine'
+  gem 'jasmine-rails'
+  gem 'mailcatcher'
+  gem 'did_you_mean'
+  gem 'guard-livereload', require: false
+end
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'meta_request'
+end
+group :test do
+  gem 'airborne' # api test
+end
+
+# haml template
+gem 'haml'
+# slim template
+gem 'slim'
+# grape api
+gem 'grape-entity'
+gem 'grape'
+# embed the V8 Javascript Interpreter into Ruby
+gem 'therubyracer', platforms: :ruby
